@@ -21,8 +21,8 @@ class Silverstripe {
         if (!static::$started) {
             static::$started = true;
             require_once('SilverstripeHelpers.php');
-            if (true !== require_once(public_path().'/../framework/core/Core.php')) {
-                require_once(public_path().'/../framework/model/DB.php');
+            if (true !== require_once(public_path().'/framework/core/Core.php')) {
+                require_once(public_path().'/framework/model/DB.php');
                 global $databaseConfig;
                 if (!\DB::isActive()) {
                     \DB::connect($databaseConfig);
