@@ -1,0 +1,22 @@
+{
+    "name": "werkzeugh/silverstripe",
+    "description": "",
+    "authors": [
+        {
+            "name": "Manfred Wuits",
+            "email": "mw@werkzeugh.at"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.x"
+    },
+    "autoload": {
+        "psr-0": {
+            "Werkzeugh\\Silverstripe": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
+
