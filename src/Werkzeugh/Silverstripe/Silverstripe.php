@@ -46,14 +46,16 @@ class Silverstripe {
             return static::$models[$key];
         }
         $segments = !is_null($url) ? static::segments($url) : Request::segments();
+
         $segment = array_shift($segments);
         if ($segment) {
-            $parentID = 0;
+            $parentID = 1;
             do {
+
                 $model = \SiteTree::get()->filter(array(
                     'URLSegment' => $segment,
                     'ParentID' => $parentID))->First();
-
+                                        
                 if ($model) {
                     $parentID = $model->ID;
                 } else {

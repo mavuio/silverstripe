@@ -76,11 +76,10 @@ class Router extends L4_Router {
 
     protected function findSilverStripeRoute(Request $request)
     {
-        Silverstripe::start();
+        Silverstripe::init();
 
         // check whether there are any matching records in the database
         $model = Silverstripe::model();
-
         if ($model && isset($this->silverstripeRoutes[$model->getClassName()])) {
             $map = $this->silverstripeRoutes[$model->getClassName()];
             $method = strtoupper($request->getMethod());
