@@ -55,7 +55,7 @@ class Silverstripe {
                 $model = \SiteTree::get()->filter(array(
                     'URLSegment' => $segment,
                     'ParentID' => $parentID))->First();
-                                        
+
                 if ($model) {
                     $parentID = $model->ID;
                 } else {
